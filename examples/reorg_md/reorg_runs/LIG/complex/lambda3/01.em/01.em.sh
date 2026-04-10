@@ -1,0 +1,2 @@
+pmemd.cuda -O -i 01.em.in -p ../../system.prmtop -c ../../system.inpcrd -ref ../../system.inpcrd -o 01.em.out -r 01.em.rst7 -inf 01.em.info -x 01.em.mdcrd -e 01.em.mden -l 01.em.log 
+ambpdb -p ../../system.prmtop -c 01.em.rst7 > 01.em.pdb

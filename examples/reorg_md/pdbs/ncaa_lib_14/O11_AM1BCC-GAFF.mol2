@@ -1,0 +1,14 @@
+@<TRIPOS>MOLECULE
+O11
+    2     1     1     0     0
+SMALL
+RESP Charge
+ 
+ 
+@<TRIPOS>ATOM
+      1 O          23.9240   46.2830    9.9890 Y6        1 O11     -0.700188
+      2 H1         23.7830   46.2960    9.0390 ho        1 O11      0.401230
+@<TRIPOS>BOND
+     1    1    2 1
+@<TRIPOS>SUBSTRUCTURE
+     1 O11         1 TEMP              0 ****  ****    0 ROOT
