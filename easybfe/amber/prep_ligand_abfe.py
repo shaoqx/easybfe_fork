@@ -159,32 +159,95 @@ def setup_ligand_abfe(
     leg_configs: dict[str, AmberFepSimulationConfig],
     output_dir: os.PathLike,
     restraints: BoreschRestraint | BoreschRestraintGeneratorConfig | None = None,
+    auto_find_boresch: bool = True,
 ):
-    if restraints is None:
-        restraints = BoreschRestraintGeneratorConfig()
-    if not isinstance(restraints, BoreschRestraint):
-        boresch_config = restraints
-        finder_kwargs = {
-            "protein": protein,
-            "ligand": ligand,
-            "wts": tuple(boresch_config.rst_wts),
-            **boresch_config.options,
-        }
-        finder = BORESCH_FINDER_REGISTRY.create(boresch_config.algorithm, **finder_kwargs)
-        restraints = finder.find()
-    
+    """Set up ABFE/reorg legs for a single ligand.
+
+    Parameters
+    ----------
+    leg_configs
+        Mapping of leg name -> config. Supported legs are ``solvent``, ``complex``,
+        and ``restraint``. Any subset is allowed.
+    restraints
+        Boresch restraints object/config. If ``None`` and ``auto_find_boresch`` is
+        True, a default Boresch restraint will be generated when needed.
+    auto_find_boresch
+        Backward-compatible switch: keep legacy behavior for direct function calls.
+        Config-driven setup passes ``False`` so ``boresch: null`` truly disables it.
+    """
     output_dir = Path(output_dir)
     output_dir.mkdir(exist_ok=True)
-    
-    setup_ligand_abfe_leg(ligand, None, leg_configs['solvent'], output_dir/'solvent', basename='system')
-    setup_ligand_abfe_leg(ligand, protein, leg_configs['complex'], output_dir/'complex', restraints=restraints, basename='system')
-    setup_ligand_abfe_leg(
-        ligand, protein, 
-        leg_configs['restraint'], output_dir/'restraint',
-        duplicate_ligand=True, restraints=restraints, basename='system'
-    )
-    boresch_fe = compute_boresch_energy(restraints.rst_vals, restraints.rst_wts)
-    (output_dir / 'boresch.dat').write_text(str(boresch_fe))
+
+    unknown_legs = set(leg_configs) - {'solvent', 'complex', 'restraint'}
+    if unknown_legs:
+        raise ValueError(f"Unsupported ABFE leg(s): {sorted(unknown_legs)}")
+    if len(leg_configs) == 0:
+        raise ValueError('No ABFE legs configured')
+
+    needs_boresch = ('complex' in leg_configs) or ('restraint' in leg_configs)
+    resolved_restraints: BoreschRestraint | None = None
+
+    if needs_boresch:
+        if isinstance(restraints, BoreschRestraint):
+            resolved_restraints = restraints
+        elif isinstance(restraints, BoreschRestraintGeneratorConfig):
+            boresch_config = restraints
+            finder_kwargs = {
+                'protein': protein,
+                'ligand': ligand,
+                'wts': tuple(boresch_config.rst_wts),
+                **boresch_config.options,
+            }
+            finder = BORESCH_FINDER_REGISTRY.create(boresch_config.algorithm, **finder_kwargs)
+            resolved_restraints = finder.find()
+        elif restraints is None and auto_find_boresch:
+            boresch_config = BoreschRestraintGeneratorConfig()
+            finder_kwargs = {
+                'protein': protein,
+                'ligand': ligand,
+                'wts': tuple(boresch_config.rst_wts),
+                **boresch_config.options,
+            }
+            finder = BORESCH_FINDER_REGISTRY.create(boresch_config.algorithm, **finder_kwargs)
+            resolved_restraints = finder.find()
+
+    if 'restraint' in leg_configs and resolved_restraints is None:
+        raise ValueError('restraint leg requires Boresch restraints, but none were provided')
+
+    if 'solvent' in leg_configs:
+        setup_ligand_abfe_leg(
+            ligand,
+            None,
+            leg_configs['solvent'],
+            output_dir / 'solvent',
+            basename='system'
+        )
+
+    if 'complex' in leg_configs:
+        setup_ligand_abfe_leg(
+            ligand,
+            protein,
+            leg_configs['complex'],
+            output_dir / 'complex',
+            restraints=resolved_restraints,
+            basename='system'
+        )
+
+    if 'restraint' in leg_configs:
+        setup_ligand_abfe_leg(
+            ligand,
+            protein,
+            leg_configs['restraint'],
+            output_dir / 'restraint',
+            duplicate_ligand=True,
+            restraints=resolved_restraints,
+            basename='system'
+        )
+
+    # Only write standard-state correction when both complex/restraint legs exist.
+    if ('complex' in leg_configs) and ('restraint' in leg_configs) and (resolved_restraints is not None):
+        boresch_fe = compute_boresch_energy(resolved_restraints.rst_vals, resolved_restraints.rst_wts)
+        (output_dir / 'boresch.dat').write_text(str(boresch_fe))
 
 
 def _resolve_ligand_directory(ligand_base: Path | None, component: os.PathLike) -> Path:
@@ -199,7 +262,7 @@ def _setup_ligand_abfe_one(
     ligand_path: Path,
     protein: Optional[Protein],
     leg_configs: dict[str, AmberFepSimulationConfig],
-    boresch_config: BoreschRestraintGeneratorConfig,
+    boresch_config: BoreschRestraintGeneratorConfig | None,
     output_dir: Path,
 ) -> None:
     """Load ligand from path and call setup_ligand_abfe (used for batch runs)."""
@@ -209,6 +272,7 @@ def _setup_ligand_abfe_one(
         protein=protein,
         leg_configs=leg_configs,
         restraints=boresch_config,
+        auto_find_boresch=False,
         output_dir=output_dir,
     )
 
@@ -233,11 +297,7 @@ def setup_ligand_abfe_from_config(
     """
     assert config.protein is not None, "AmberAbfeConfig.protein must be set"
 
-    leg_configs = {
-        "complex": config.complex,
-        "solvent": config.solvent,
-        "restraint": config.restraint,
-    }
+    leg_configs = {leg: getattr(config, leg) for leg in config.active_legs}
     protein = Protein.from_pdb(config.protein, name=config.protein.stem)
     lig_base = Path(config.ligand_base).expanduser().resolve() if config.ligand_base is not None else None
 
@@ -300,5 +360,6 @@ def setup_ligand_abfe_from_config(
         protein=protein,
         leg_configs=leg_configs,
         restraints=config.boresch,
+        auto_find_boresch=False,
         output_dir=run_out,
     )
