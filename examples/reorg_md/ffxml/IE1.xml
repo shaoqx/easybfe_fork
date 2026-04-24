@@ -1,0 +1,195 @@
+<ForceField>
+	<Residues>
+		<Residue name="IE1">
+			<Atom name="N" type="IE1-N" charge="-0.4976579998" />
+			<Atom name="H" type="IE1-H" charge="0.3006499997" />
+			<Atom name="CA" type="IE1-CA" charge="-0.0763610000" />
+			<Atom name="HA" type="IE1-HA" charge="0.1327170000" />
+			<Atom name="CB" type="IE1-CB" charge="0.0833269999" />
+			<Atom name="HB" type="IE1-HB" charge="0.0850170000" />
+			<Atom name="CG2" type="IE1-CG2" charge="-0.3516000000" />
+			<Atom name="HG21" type="IE1-HG21" charge="0.0769730001" />
+			<Atom name="HG22" type="IE1-HG22" charge="0.0769730001" />
+			<Atom name="HG23" type="IE1-HG23" charge="0.0769730001" />
+			<Atom name="CG1" type="IE1-CG1" charge="0.0392040000" />
+			<Atom name="HG12" type="IE1-HG12" charge="0.0083340000" />
+			<Atom name="HG13" type="IE1-HG13" charge="0.0083340000" />
+			<Atom name="CD1" type="IE1-CD1" charge="-0.2143470001" />
+			<Atom name="HD11" type="IE1-HD11" charge="0.0541060000" />
+			<Atom name="HD12" type="IE1-HD12" charge="0.0541060000" />
+			<Atom name="HD13" type="IE1-HD13" charge="0.0541060000" />
+			<Atom name="C" type="IE1-C" charge="0.7002500014" />
+			<Atom name="O" type="IE1-O" charge="-0.4647070002" />
+			<Atom name="OXT" type="IE1-OXT" charge="-0.6797430017" />
+			<Bond atomName1="N" atomName2="CA" />
+			<Bond atomName1="CA" atomName2="CB" />
+			<Bond atomName1="CA" atomName2="C" />
+			<Bond atomName1="CB" atomName2="CG2" />
+			<Bond atomName1="CB" atomName2="CG1" />
+			<Bond atomName1="CG1" atomName2="CD1" />
+			<Bond atomName1="C" atomName2="O" />
+			<Bond atomName1="C" atomName2="OXT" />
+			<Bond atomName1="N" atomName2="H" />
+			<Bond atomName1="CA" atomName2="HA" />
+			<Bond atomName1="CB" atomName2="HB" />
+			<Bond atomName1="CG2" atomName2="HG21" />
+			<Bond atomName1="CG2" atomName2="HG22" />
+			<Bond atomName1="CG2" atomName2="HG23" />
+			<Bond atomName1="CG1" atomName2="HG12" />
+			<Bond atomName1="CG1" atomName2="HG13" />
+			<Bond atomName1="CD1" atomName2="HD11" />
+			<Bond atomName1="CD1" atomName2="HD12" />
+			<Bond atomName1="CD1" atomName2="HD13" />
+		<ExternalBond atomName="N" /><ExternalBond atomName="OXT" /></Residue>
+	</Residues>
+	<AtomTypes>
+		<Type element="N" name="IE1-N" class="N" mass="14.010" />
+		<Type element="H" name="IE1-H" class="H" mass="1.008" />
+		<Type element="C" name="IE1-CA" class="CX" mass="12.010" />
+		<Type element="H" name="IE1-HA" class="H1" mass="1.008" />
+		<Type element="C" name="IE1-CB" class="3C" mass="12.010" />
+		<Type element="H" name="IE1-HB" class="HC" mass="1.008" />
+		<Type element="C" name="IE1-CG2" class="CT" mass="12.010" />
+		<Type element="H" name="IE1-HG21" class="HC" mass="1.008" />
+		<Type element="H" name="IE1-HG22" class="HC" mass="1.008" />
+		<Type element="H" name="IE1-HG23" class="HC" mass="1.008" />
+		<Type element="C" name="IE1-CG1" class="2C" mass="12.010" />
+		<Type element="H" name="IE1-HG12" class="HC" mass="1.008" />
+		<Type element="H" name="IE1-HG13" class="HC" mass="1.008" />
+		<Type element="C" name="IE1-CD1" class="CT" mass="12.010" />
+		<Type element="H" name="IE1-HD11" class="HC" mass="1.008" />
+		<Type element="H" name="IE1-HD12" class="HC" mass="1.008" />
+		<Type element="H" name="IE1-HD13" class="HC" mass="1.008" />
+		<Type element="C" name="IE1-C" class="C" mass="12.010" />
+		<Type element="O" name="IE1-O" class="O2" mass="16.000" />
+		<Type element="O" name="IE1-OXT" class="Y5" mass="16.000" />
+	</AtomTypes>
+	<HarmonicBondForce>
+		<Bond type1="IE1-N" type2="IE1-CA" length="0.1449000000" k="282001.6000000000" />
+		<Bond type1="IE1-CA" type2="IE1-CB" length="0.1526000000" k="259408.0000000000" />
+		<Bond type1="IE1-CA" type2="IE1-C" length="0.1522000000" k="265265.6000000000" />
+		<Bond type1="IE1-CB" type2="IE1-CG2" length="0.1526000000" k="259408.0000000000" />
+		<Bond type1="IE1-CB" type2="IE1-CG1" length="0.1526000000" k="259408.0000000000" />
+		<Bond type1="IE1-CG1" type2="IE1-CD1" length="0.1526000000" k="259408.0000000000" />
+		<Bond type1="IE1-C" type2="IE1-O" length="0.1250000000" k="548940.8000000000" />
+		<Bond type1="IE1-C" type2="IE1-OXT" length="0.1250000000" k="548940.8000000000" />
+		<Bond type1="IE1-N" type2="IE1-H" length="0.1010000000" k="363171.2000000000" />
+		<Bond type1="IE1-CA" type2="IE1-HA" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="IE1-CB" type2="IE1-HB" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="IE1-CG2" type2="IE1-HG21" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="IE1-CG2" type2="IE1-HG22" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="IE1-CG2" type2="IE1-HG23" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="IE1-CG1" type2="IE1-HG12" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="IE1-CG1" type2="IE1-HG13" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="IE1-CD1" type2="IE1-HD11" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="IE1-CD1" type2="IE1-HD12" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="IE1-CD1" type2="IE1-HD13" length="0.1090000000" k="284512.0000000000" />
+	</HarmonicBondForce>
+	<HarmonicAngleForce>
+		<Angle type1="IE1-N" type2="IE1-CA" type3="IE1-CB" angle="1.9146270100" k="669.4400000000" />
+		<Angle type1="IE1-N" type2="IE1-CA" type3="IE1-C" angle="1.9216083300" k="527.1840000000" />
+		<Angle type1="IE1-CA" type2="IE1-CB" type3="IE1-CG2" angle="1.9111363500" k="334.7200000000" />
+		<Angle type1="IE1-CA" type2="IE1-CB" type3="IE1-CG1" angle="1.9111363500" k="334.7200000000" />
+		<Angle type1="IE1-CA" type2="IE1-C" type3="IE1-O" angle="2.0420361000" k="585.7600000000" />
+		<Angle type1="IE1-CA" type2="IE1-C" type3="IE1-OXT" angle="2.0420361000" k="585.7600000000" />
+		<Angle type1="IE1-CB" type2="IE1-CA" type3="IE1-C" angle="1.9390616300" k="527.1840000000" />
+		<Angle type1="IE1-CB" type2="IE1-CG1" type3="IE1-CD1" angle="1.9111363500" k="334.7200000000" />
+		<Angle type1="IE1-CG2" type2="IE1-CB" type3="IE1-CG1" angle="1.9111363500" k="334.7200000000" />
+		<Angle type1="IE1-O" type2="IE1-C" type3="IE1-OXT" angle="2.1991158000" k="669.4400000000" />
+		<Angle type1="IE1-N" type2="IE1-CA" type3="IE1-HA" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-H" type2="IE1-N" type3="IE1-CA" angle="2.0601875300" k="418.4000000000" />
+		<Angle type1="IE1-CA" type2="IE1-CB" type3="IE1-HB" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-HA" type2="IE1-CA" type3="IE1-CB" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-HA" type2="IE1-CA" type3="IE1-C" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-CB" type2="IE1-CG2" type3="IE1-HG21" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-CB" type2="IE1-CG2" type3="IE1-HG22" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-CB" type2="IE1-CG2" type3="IE1-HG23" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-CB" type2="IE1-CG1" type3="IE1-HG12" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-CB" type2="IE1-CG1" type3="IE1-HG13" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-HB" type2="IE1-CB" type3="IE1-CG2" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-HB" type2="IE1-CB" type3="IE1-CG1" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-HG21" type2="IE1-CG2" type3="IE1-HG22" angle="1.9111363500" k="292.8800000000" />
+		<Angle type1="IE1-HG21" type2="IE1-CG2" type3="IE1-HG23" angle="1.9111363500" k="292.8800000000" />
+		<Angle type1="IE1-HG22" type2="IE1-CG2" type3="IE1-HG23" angle="1.9111363500" k="292.8800000000" />
+		<Angle type1="IE1-CG1" type2="IE1-CD1" type3="IE1-HD11" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-CG1" type2="IE1-CD1" type3="IE1-HD12" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-CG1" type2="IE1-CD1" type3="IE1-HD13" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-HG12" type2="IE1-CG1" type3="IE1-HG13" angle="1.9111363500" k="292.8800000000" />
+		<Angle type1="IE1-HG12" type2="IE1-CG1" type3="IE1-CD1" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-HG13" type2="IE1-CG1" type3="IE1-CD1" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="IE1-HD11" type2="IE1-CD1" type3="IE1-HD12" angle="1.9111363500" k="292.8800000000" />
+		<Angle type1="IE1-HD11" type2="IE1-CD1" type3="IE1-HD13" angle="1.9111363500" k="292.8800000000" />
+		<Angle type1="IE1-HD12" type2="IE1-CD1" type3="IE1-HD13" angle="1.9111363500" k="292.8800000000" />
+	</HarmonicAngleForce>
+	<PeriodicTorsionForce ordering="amber">
+		<Proper type1="IE1-N" type2="IE1-CA" type3="IE1-CB" type4="IE1-CG2" periodicity1="1" phase1="0.0000000000" k1="1.4100080000" periodicity2="2" phase2="3.1415940000" k2="0.9037440000" periodicity3="3" phase3="0.0000000000" k3="0.6192320000" periodicity4="4" phase4="3.1415940000" k4="0.0041840000" />
+		<Proper type1="IE1-N" type2="IE1-CA" type3="IE1-CB" type4="IE1-CG1" periodicity1="1" phase1="0.0000000000" k1="1.2970400000" periodicity2="2" phase2="3.1415940000" k2="0.6024960000" periodicity3="3" phase3="0.0000000000" k3="0.4727920000" periodicity4="4" phase4="3.1415940000" k4="0.4058480000" />
+		<Proper type1="IE1-N" type2="IE1-CA" type3="IE1-C" type4="IE1-O" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="IE1-N" type2="IE1-CA" type3="IE1-C" type4="IE1-OXT" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="IE1-CA" type2="IE1-CB" type3="IE1-CG1" type4="IE1-CD1" periodicity1="1" phase1="0.0000000000" k1="1.8702480000" periodicity2="2" phase2="0.0000000000" k2="0.2217520000" periodicity3="3" phase3="0.0000000000" k3="0.4476880000" periodicity4="4" phase4="0.0000000000" k4="0.9623200000" />
+		<Proper type1="IE1-CB" type2="IE1-CA" type3="IE1-C" type4="IE1-O" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="IE1-CB" type2="IE1-CA" type3="IE1-C" type4="IE1-OXT" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="IE1-CG2" type2="IE1-CB" type3="IE1-CA" type4="IE1-C" periodicity1="1" phase1="3.1415940000" k1="1.6987040000" periodicity2="2" phase2="3.1415940000" k2="1.2091760000" periodicity3="3" phase3="0.0000000000" k3="0.6192320000" periodicity4="4" phase4="0.0000000000" k4="0.4686080000" />
+		<Proper type1="IE1-CG2" type2="IE1-CB" type3="IE1-CG1" type4="IE1-CD1" periodicity1="1" phase1="0.0000000000" k1="0.8451680000" periodicity2="2" phase2="3.1415940000" k2="0.3221680000" periodicity3="3" phase3="0.0000000000" k3="0.4476880000" periodicity4="4" phase4="0.0000000000" k4="0.9372160000" />
+		<Proper type1="IE1-CG1" type2="IE1-CB" type3="IE1-CA" type4="IE1-C" periodicity1="1" phase1="0.0000000000" k1="0.6778080000" periodicity2="2" phase2="3.1415940000" k2="3.0752400000" periodicity3="3" phase3="0.0000000000" k3="0.4727920000" periodicity4="4" phase4="0.0000000000" k4="0.4811600000" />
+		<Proper type1="IE1-N" type2="IE1-CA" type3="IE1-CB" type4="IE1-HB" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="IE1-H" type2="IE1-N" type3="IE1-CA" type4="IE1-HA" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="IE1-H" type2="IE1-N" type3="IE1-CA" type4="IE1-CB" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="IE1-H" type2="IE1-N" type3="IE1-CA" type4="IE1-C" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="IE1-CA" type2="IE1-CB" type3="IE1-CG2" type4="IE1-HG21" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-CA" type2="IE1-CB" type3="IE1-CG2" type4="IE1-HG22" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-CA" type2="IE1-CB" type3="IE1-CG2" type4="IE1-HG23" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-CA" type2="IE1-CB" type3="IE1-CG1" type4="IE1-HG12" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-CA" type2="IE1-CB" type3="IE1-CG1" type4="IE1-HG13" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-HA" type2="IE1-CA" type3="IE1-CB" type4="IE1-HB" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="IE1-HA" type2="IE1-CA" type3="IE1-CB" type4="IE1-CG2" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="IE1-HA" type2="IE1-CA" type3="IE1-CB" type4="IE1-CG1" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="IE1-HA" type2="IE1-CA" type3="IE1-C" type4="IE1-O" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="IE1-HA" type2="IE1-CA" type3="IE1-C" type4="IE1-OXT" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="IE1-CB" type2="IE1-CG1" type3="IE1-CD1" type4="IE1-HD11" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-CB" type2="IE1-CG1" type3="IE1-CD1" type4="IE1-HD12" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-CB" type2="IE1-CG1" type3="IE1-CD1" type4="IE1-HD13" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-HB" type2="IE1-CB" type3="IE1-CA" type4="IE1-C" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="IE1-HB" type2="IE1-CB" type3="IE1-CG2" type4="IE1-HG21" periodicity1="3" phase1="0.0000000000" k1="0.6276000000" />
+		<Proper type1="IE1-HB" type2="IE1-CB" type3="IE1-CG2" type4="IE1-HG22" periodicity1="3" phase1="0.0000000000" k1="0.6276000000" />
+		<Proper type1="IE1-HB" type2="IE1-CB" type3="IE1-CG2" type4="IE1-HG23" periodicity1="3" phase1="0.0000000000" k1="0.6276000000" />
+		<Proper type1="IE1-HB" type2="IE1-CB" type3="IE1-CG1" type4="IE1-HG12" periodicity1="3" phase1="0.0000000000" k1="0.6276000000" />
+		<Proper type1="IE1-HB" type2="IE1-CB" type3="IE1-CG1" type4="IE1-HG13" periodicity1="3" phase1="0.0000000000" k1="0.6276000000" />
+		<Proper type1="IE1-HB" type2="IE1-CB" type3="IE1-CG1" type4="IE1-CD1" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-CG2" type2="IE1-CB" type3="IE1-CG1" type4="IE1-HG12" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-CG2" type2="IE1-CB" type3="IE1-CG1" type4="IE1-HG13" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-HG21" type2="IE1-CG2" type3="IE1-CB" type4="IE1-CG1" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-HG22" type2="IE1-CG2" type3="IE1-CB" type4="IE1-CG1" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-HG23" type2="IE1-CG2" type3="IE1-CB" type4="IE1-CG1" periodicity1="3" phase1="0.0000000000" k1="0.6694400000" />
+		<Proper type1="IE1-HG12" type2="IE1-CG1" type3="IE1-CD1" type4="IE1-HD11" periodicity1="3" phase1="0.0000000000" k1="0.6276000000" />
+		<Proper type1="IE1-HG12" type2="IE1-CG1" type3="IE1-CD1" type4="IE1-HD12" periodicity1="3" phase1="0.0000000000" k1="0.6276000000" />
+		<Proper type1="IE1-HG12" type2="IE1-CG1" type3="IE1-CD1" type4="IE1-HD13" periodicity1="3" phase1="0.0000000000" k1="0.6276000000" />
+		<Proper type1="IE1-HG13" type2="IE1-CG1" type3="IE1-CD1" type4="IE1-HD11" periodicity1="3" phase1="0.0000000000" k1="0.6276000000" />
+		<Proper type1="IE1-HG13" type2="IE1-CG1" type3="IE1-CD1" type4="IE1-HD12" periodicity1="3" phase1="0.0000000000" k1="0.6276000000" />
+		<Proper type1="IE1-HG13" type2="IE1-CG1" type3="IE1-CD1" type4="IE1-HD13" periodicity1="3" phase1="0.0000000000" k1="0.6276000000" />
+		<Improper type1="IE1-C" type2="IE1-CA" type3="IE1-O" type4="IE1-OXT" periodicity1="2" phase1="3.1415940000" k1="43.9320000000" />
+	</PeriodicTorsionForce>
+	<NonbondedForce coulomb14scale="0.83333" lj14scale="0.50000">
+		<UseAttributeFromResidue name="charge" />
+		<Atom type="IE1-N" sigma="0.3249998524" epsilon="0.7112799997" />
+		<Atom type="IE1-H" sigma="0.1069078462" epsilon="0.0656888000" />
+		<Atom type="IE1-CA" sigma="0.3399669508" epsilon="0.4577295996" />
+		<Atom type="IE1-HA" sigma="0.2471353043" epsilon="0.0656888004" />
+		<Atom type="IE1-CB" sigma="0.3399669508" epsilon="0.4577295996" />
+		<Atom type="IE1-HB" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="IE1-CG2" sigma="0.3399669508" epsilon="0.4577295996" />
+		<Atom type="IE1-HG21" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="IE1-HG22" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="IE1-HG23" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="IE1-CG1" sigma="0.3399669508" epsilon="0.4577295996" />
+		<Atom type="IE1-HG12" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="IE1-HG13" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="IE1-CD1" sigma="0.3399669508" epsilon="0.4577295996" />
+		<Atom type="IE1-HD11" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="IE1-HD12" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="IE1-HD13" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="IE1-C" sigma="0.3399669508" epsilon="0.3598240005" />
+		<Atom type="IE1-O" sigma="0.2959921902" epsilon="0.8786399993" />
+		<Atom type="IE1-OXT" sigma="0.2959921902" epsilon="0.8786399993" />
+	</NonbondedForce>
+</ForceField>

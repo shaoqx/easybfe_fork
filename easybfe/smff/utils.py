@@ -713,10 +713,16 @@ class OpenmmXML:
                     scees.append(scee)
                     scnbs.append(scnb)
                 
-                assert np.allclose(scees, scees[0]), 'More than one coul 1-4 scales'
-                assert np.allclose(scnbs, scnbs[0]), 'More than one vdw 1-4 scales'
-                coul14scale = 1 / scees[0]
-                lj14scale = 1 / scnbs[0]
+                if len(scees) == 0:
+                    # Molecules like single-atom ions can have no proper dihedrals;
+                    # 1-4 scaling is irrelevant in that case, so keep OpenMM defaults.
+                    coul14scale = 5 / 6
+                    lj14scale = 1 / 2
+                else:
+                    assert np.allclose(scees, scees[0]), 'More than one coul 1-4 scales'
+                    assert np.allclose(scnbs, scnbs[0]), 'More than one vdw 1-4 scales'
+                    coul14scale = 1 / scees[0]
+                    lj14scale = 1 / scnbs[0]
             
             nbsElement.set("coulomb14scale", f"{coul14scale:.5f}")
             nbsElement.set("lj14scale", f"{lj14scale:.5f}")

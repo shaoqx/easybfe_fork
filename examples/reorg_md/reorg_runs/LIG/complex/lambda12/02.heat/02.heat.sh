@@ -1,0 +1,2 @@
+pmemd.cuda -O -i 02.heat.in -p ../../system.prmtop -c ../01.em/01.em.rst7 -ref ../01.em/01.em.rst7 -o 02.heat.out -r 02.heat.rst7 -inf 02.heat.info -x 02.heat.mdcrd -e 02.heat.mden -l 02.heat.log 
+ambpdb -p ../../system.prmtop -c 02.heat.rst7 > 02.heat.pdb

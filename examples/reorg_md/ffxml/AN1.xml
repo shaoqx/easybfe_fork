@@ -1,0 +1,132 @@
+<ForceField>
+	<Residues>
+		<Residue name="AN1">
+			<Atom name="N" type="AN1-N" charge="-0.4157000000" />
+			<Atom name="H" type="AN1-H" charge="0.3595409998" />
+			<Atom name="CA" type="AN1-CA" charge="0.0143000000" />
+			<Atom name="HA" type="AN1-HA" charge="0.0744690001" />
+			<Atom name="CB" type="AN1-CB" charge="0.1144619999" />
+			<Atom name="HB2" type="AN1-HB2" charge="-0.0121590000" />
+			<Atom name="HB3" type="AN1-HB3" charge="-0.0121590000" />
+			<Atom name="CG" type="AN1-CG" charge="0.2709210001" />
+			<Atom name="OD1" type="AN1-OD1" charge="-0.1565430001" />
+			<Atom name="ND2" type="AN1-ND2" charge="-0.7591399988" />
+			<Atom name="HD21" type="AN1-HD21" charge="0.4055399999" />
+			<Atom name="HD22" type="AN1-HD22" charge="0.3910480000" />
+			<Atom name="C" type="AN1-C" charge="0.5973000005" />
+			<Atom name="O" type="AN1-O" charge="-0.5679000016" />
+			<Bond atomName1="N" atomName2="CA" />
+			<Bond atomName1="CA" atomName2="CB" />
+			<Bond atomName1="CA" atomName2="C" />
+			<Bond atomName1="CB" atomName2="CG" />
+			<Bond atomName1="CG" atomName2="OD1" />
+			<Bond atomName1="CG" atomName2="ND2" />
+			<Bond atomName1="C" atomName2="O" />
+			<Bond atomName1="N" atomName2="H" />
+			<Bond atomName1="CA" atomName2="HA" />
+			<Bond atomName1="CB" atomName2="HB2" />
+			<Bond atomName1="CB" atomName2="HB3" />
+			<Bond atomName1="ND2" atomName2="HD21" />
+			<Bond atomName1="ND2" atomName2="HD22" />
+		<ExternalBond atomName="N" /><ExternalBond atomName="C" /><ExternalBond atomName="OD1" /></Residue>
+	</Residues>
+	<AtomTypes>
+		<Type element="N" name="AN1-N" class="N" mass="14.010" />
+		<Type element="H" name="AN1-H" class="H" mass="1.008" />
+		<Type element="C" name="AN1-CA" class="CX" mass="12.010" />
+		<Type element="H" name="AN1-HA" class="H1" mass="1.008" />
+		<Type element="C" name="AN1-CB" class="2C" mass="12.010" />
+		<Type element="H" name="AN1-HB2" class="HC" mass="1.008" />
+		<Type element="H" name="AN1-HB3" class="HC" mass="1.008" />
+		<Type element="C" name="AN1-CG" class="C" mass="12.010" />
+		<Type element="O" name="AN1-OD1" class="Y4" mass="16.000" />
+		<Type element="N" name="AN1-ND2" class="N" mass="14.010" />
+		<Type element="H" name="AN1-HD21" class="H" mass="1.008" />
+		<Type element="H" name="AN1-HD22" class="H" mass="1.008" />
+		<Type element="C" name="AN1-C" class="C" mass="12.010" />
+		<Type element="O" name="AN1-O" class="O" mass="16.000" />
+	</AtomTypes>
+	<HarmonicBondForce>
+		<Bond type1="AN1-N" type2="AN1-CA" length="0.1449000000" k="282001.6000000000" />
+		<Bond type1="AN1-CA" type2="AN1-CB" length="0.1526000000" k="259408.0000000000" />
+		<Bond type1="AN1-CA" type2="AN1-C" length="0.1522000000" k="265265.6000000000" />
+		<Bond type1="AN1-CB" type2="AN1-CG" length="0.1522000000" k="265265.6000000000" />
+		<Bond type1="AN1-CG" type2="AN1-OD1" length="0.1229000000" k="476976.0000000001" />
+		<Bond type1="AN1-CG" type2="AN1-ND2" length="0.1335000000" k="410032.0000000001" />
+		<Bond type1="AN1-C" type2="AN1-O" length="0.1229000000" k="476976.0000000001" />
+		<Bond type1="AN1-N" type2="AN1-H" length="0.1010000000" k="363171.2000000000" />
+		<Bond type1="AN1-CA" type2="AN1-HA" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="AN1-CB" type2="AN1-HB2" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="AN1-CB" type2="AN1-HB3" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="AN1-ND2" type2="AN1-HD21" length="0.1010000000" k="363171.2000000000" />
+		<Bond type1="AN1-ND2" type2="AN1-HD22" length="0.1010000000" k="363171.2000000000" />
+	</HarmonicBondForce>
+	<HarmonicAngleForce>
+		<Angle type1="AN1-N" type2="AN1-CA" type3="AN1-CB" angle="1.9146270100" k="669.4400000000" />
+		<Angle type1="AN1-N" type2="AN1-CA" type3="AN1-C" angle="1.9216083300" k="527.1840000000" />
+		<Angle type1="AN1-CA" type2="AN1-CB" type3="AN1-CG" angle="1.9390616300" k="527.1840000000" />
+		<Angle type1="AN1-CA" type2="AN1-C" type3="AN1-O" angle="2.1013773200" k="669.4400000000" />
+		<Angle type1="AN1-CB" type2="AN1-CA" type3="AN1-C" angle="1.9390616300" k="527.1840000000" />
+		<Angle type1="AN1-CB" type2="AN1-CG" type3="AN1-OD1" angle="2.1013773200" k="669.4400000000" />
+		<Angle type1="AN1-CB" type2="AN1-CG" type3="AN1-ND2" angle="2.0350547800" k="585.7600000000" />
+		<Angle type1="AN1-OD1" type2="AN1-CG" type3="AN1-ND2" angle="2.1450105700" k="669.4400000000" />
+		<Angle type1="AN1-N" type2="AN1-CA" type3="AN1-HA" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="AN1-H" type2="AN1-N" type3="AN1-CA" angle="2.0601875300" k="418.4000000000" />
+		<Angle type1="AN1-CA" type2="AN1-CB" type3="AN1-HB2" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="AN1-CA" type2="AN1-CB" type3="AN1-HB3" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="AN1-HA" type2="AN1-CA" type3="AN1-CB" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="AN1-HA" type2="AN1-CA" type3="AN1-C" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="AN1-HB2" type2="AN1-CB" type3="AN1-HB3" angle="1.9111363500" k="292.8800000000" />
+		<Angle type1="AN1-HB2" type2="AN1-CB" type3="AN1-CG" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="AN1-HB3" type2="AN1-CB" type3="AN1-CG" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="AN1-CG" type2="AN1-ND2" type3="AN1-HD21" angle="2.0943960000" k="418.4000000000" />
+		<Angle type1="AN1-CG" type2="AN1-ND2" type3="AN1-HD22" angle="2.0943960000" k="418.4000000000" />
+		<Angle type1="AN1-HD21" type2="AN1-ND2" type3="AN1-HD22" angle="2.0943960000" k="292.8800000000" />
+	</HarmonicAngleForce>
+	<PeriodicTorsionForce ordering="amber">
+		<Proper type1="AN1-N" type2="AN1-CA" type3="AN1-CB" type4="AN1-CG" periodicity1="1" phase1="3.1415940000" k1="2.8785920000" periodicity2="2" phase2="3.1415940000" k2="1.2426480000" periodicity3="3" phase3="0.0000000000" k3="0.1380720000" periodicity4="4" phase4="0.0000000000" k4="0.2468560000" />
+		<Proper type1="AN1-N" type2="AN1-CA" type3="AN1-C" type4="AN1-O" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="AN1-CA" type2="AN1-CB" type3="AN1-CG" type4="AN1-OD1" periodicity1="1" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="AN1-CA" type2="AN1-CB" type3="AN1-CG" type4="AN1-ND2" periodicity1="1" phase1="3.1415940000" k1="3.4643520000" periodicity2="2" phase2="3.1415940000" k2="2.0292400000" periodicity3="3" phase3="3.1415940000" k3="1.2593840000" periodicity4="4" phase4="0.0000000000" k4="0.0334720000" />
+		<Proper type1="AN1-CB" type2="AN1-CA" type3="AN1-C" type4="AN1-O" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="AN1-CG" type2="AN1-CB" type3="AN1-CA" type4="AN1-C" periodicity1="1" phase1="0.0000000000" k1="4.3764640000" periodicity2="2" phase2="3.1415940000" k2="1.2677520000" periodicity3="3" phase3="0.0000000000" k3="0.1380720000" periodicity4="4" phase4="0.0000000000" k4="0.4476880000" />
+		<Proper type1="AN1-N" type2="AN1-CA" type3="AN1-CB" type4="AN1-HB2" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="AN1-N" type2="AN1-CA" type3="AN1-CB" type4="AN1-HB3" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="AN1-H" type2="AN1-N" type3="AN1-CA" type4="AN1-HA" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="AN1-H" type2="AN1-N" type3="AN1-CA" type4="AN1-CB" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="AN1-H" type2="AN1-N" type3="AN1-CA" type4="AN1-C" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="AN1-HA" type2="AN1-CA" type3="AN1-CB" type4="AN1-HB2" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="AN1-HA" type2="AN1-CA" type3="AN1-CB" type4="AN1-HB3" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="AN1-HA" type2="AN1-CA" type3="AN1-CB" type4="AN1-CG" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="AN1-HA" type2="AN1-CA" type3="AN1-C" type4="AN1-O" periodicity1="1" phase1="0.0000000000" k1="3.3472000000" periodicity2="2" phase2="0.0000000000" k2="0.0000000000" periodicity3="3" phase3="3.1415940000" k3="0.3347200000" />
+		<Proper type1="AN1-CB" type2="AN1-CG" type3="AN1-ND2" type4="AN1-HD21" periodicity1="2" phase1="3.1415940000" k1="10.4600000000" />
+		<Proper type1="AN1-CB" type2="AN1-CG" type3="AN1-ND2" type4="AN1-HD22" periodicity1="2" phase1="3.1415940000" k1="10.4600000000" />
+		<Proper type1="AN1-HB2" type2="AN1-CB" type3="AN1-CA" type4="AN1-C" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="AN1-HB2" type2="AN1-CB" type3="AN1-CG" type4="AN1-OD1" periodicity1="1" phase1="0.0000000000" k1="3.3472000000" periodicity2="2" phase2="0.0000000000" k2="0.0000000000" periodicity3="3" phase3="3.1415940000" k3="0.3347200000" />
+		<Proper type1="AN1-HB2" type2="AN1-CB" type3="AN1-CG" type4="AN1-ND2" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="AN1-HB3" type2="AN1-CB" type3="AN1-CA" type4="AN1-C" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="AN1-HB3" type2="AN1-CB" type3="AN1-CG" type4="AN1-OD1" periodicity1="1" phase1="0.0000000000" k1="3.3472000000" periodicity2="2" phase2="0.0000000000" k2="0.0000000000" periodicity3="3" phase3="3.1415940000" k3="0.3347200000" />
+		<Proper type1="AN1-HB3" type2="AN1-CB" type3="AN1-CG" type4="AN1-ND2" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="AN1-OD1" type2="AN1-CG" type3="AN1-ND2" type4="AN1-HD21" periodicity1="1" phase1="0.0000000000" k1="8.3680000000" periodicity2="2" phase2="3.1415940000" k2="10.4600000000" />
+		<Proper type1="AN1-OD1" type2="AN1-CG" type3="AN1-ND2" type4="AN1-HD22" periodicity1="1" phase1="0.0000000000" k1="8.3680000000" periodicity2="2" phase2="3.1415940000" k2="10.4600000000" />
+		<Improper type1="AN1-CG" type2="AN1-CB" type3="AN1-ND2" type4="AN1-OD1" periodicity1="2" phase1="3.1415940000" k1="43.9320000000" />
+		<Improper type1="AN1-ND2" type2="AN1-CG" type3="AN1-HD21" type4="AN1-HD22" periodicity1="2" phase1="3.1415940000" k1="4.1840000000" />
+	</PeriodicTorsionForce>
+	<NonbondedForce coulomb14scale="0.83333" lj14scale="0.50000">
+		<UseAttributeFromResidue name="charge" />
+		<Atom type="AN1-N" sigma="0.3249998524" epsilon="0.7112799997" />
+		<Atom type="AN1-H" sigma="0.1069078462" epsilon="0.0656888000" />
+		<Atom type="AN1-CA" sigma="0.3399669508" epsilon="0.4577295996" />
+		<Atom type="AN1-HA" sigma="0.2471353043" epsilon="0.0656888004" />
+		<Atom type="AN1-CB" sigma="0.3399669508" epsilon="0.4577295996" />
+		<Atom type="AN1-HB2" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="AN1-HB3" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="AN1-CG" sigma="0.3399669508" epsilon="0.3598240005" />
+		<Atom type="AN1-OD1" sigma="0.2959921902" epsilon="0.8786399993" />
+		<Atom type="AN1-ND2" sigma="0.3249998524" epsilon="0.7112799997" />
+		<Atom type="AN1-HD21" sigma="0.1069078462" epsilon="0.0656888000" />
+		<Atom type="AN1-HD22" sigma="0.1069078462" epsilon="0.0656888000" />
+		<Atom type="AN1-C" sigma="0.3399669508" epsilon="0.3598240005" />
+		<Atom type="AN1-O" sigma="0.2959921902" epsilon="0.8786399993" />
+	</NonbondedForce>
+</ForceField>

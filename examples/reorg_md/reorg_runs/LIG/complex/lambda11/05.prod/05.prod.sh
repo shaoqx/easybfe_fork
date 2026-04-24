@@ -1,0 +1,2 @@
+pmemd.cuda -O -i 05.prod.in -p ../../system.prmtop -c ../04.pre_prod/04.pre_prod.rst7 -ref ../04.pre_prod/04.pre_prod.rst7 -o 05.prod.out -r 05.prod.rst7 -inf 05.prod.info -x 05.prod.mdcrd -e 05.prod.mden -l 05.prod.log 
+ambpdb -p ../../system.prmtop -c 05.prod.rst7 > 05.prod.pdb

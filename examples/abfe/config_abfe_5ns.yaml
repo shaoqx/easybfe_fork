@@ -4,8 +4,7 @@
 # For each name in ligand_batch, inputs are taken from <ligand_base>/<ligand_name>/.
 ligand_base: ./ligands
 ligand_batch:
-  - jmc_23
-  - ejm_31
+  - jmc_32
 
 protein: ../tyk2/tyk2_pdbfixer.pdb
 

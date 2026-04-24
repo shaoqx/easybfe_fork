@@ -1,0 +1,170 @@
+<ForceField>
+	<Residues>
+		<Residue name="HD1">
+			<Atom name="N" type="HD1-N" charge="-0.4157000000" />
+			<Atom name="H" type="HD1-H" charge="0.2762350000" />
+			<Atom name="CA" type="HD1-CA" charge="0.0188000000" />
+			<Atom name="HA" type="HD1-HA" charge="0.1264090000" />
+			<Atom name="CB" type="HD1-CB" charge="-0.0293780000" />
+			<Atom name="HB2" type="HD1-HB2" charge="0.0492270000" />
+			<Atom name="HB3" type="HD1-HB3" charge="0.0492270000" />
+			<Atom name="CG" type="HD1-CG" charge="0.0915619999" />
+			<Atom name="ND1" type="HD1-ND1" charge="-0.2645210001" />
+			<Atom name="HD1" type="HD1-HD1" charge="0.3451619999" />
+			<Atom name="CE1" type="HD1-CE1" charge="0.0177670000" />
+			<Atom name="HE1" type="HD1-HE1" charge="0.1661610000" />
+			<Atom name="NE2" type="HD1-NE2" charge="-0.0464880000" />
+			<Atom name="CD2" type="HD1-CD2" charge="-0.2147610000" />
+			<Atom name="HD2" type="HD1-HD2" charge="0.1128500003" />
+			<Atom name="C" type="HD1-C" charge="0.5973000005" />
+			<Atom name="O" type="HD1-O" charge="-0.5679000016" />
+			<Bond atomName1="N" atomName2="CA" />
+			<Bond atomName1="CA" atomName2="CB" />
+			<Bond atomName1="CA" atomName2="C" />
+			<Bond atomName1="CB" atomName2="CG" />
+			<Bond atomName1="CG" atomName2="ND1" />
+			<Bond atomName1="CG" atomName2="CD2" />
+			<Bond atomName1="ND1" atomName2="CE1" />
+			<Bond atomName1="CE1" atomName2="NE2" />
+			<Bond atomName1="NE2" atomName2="CD2" />
+			<Bond atomName1="C" atomName2="O" />
+			<Bond atomName1="N" atomName2="H" />
+			<Bond atomName1="CA" atomName2="HA" />
+			<Bond atomName1="CB" atomName2="HB2" />
+			<Bond atomName1="CB" atomName2="HB3" />
+			<Bond atomName1="ND1" atomName2="HD1" />
+			<Bond atomName1="CE1" atomName2="HE1" />
+			<Bond atomName1="CD2" atomName2="HD2" />
+		<ExternalBond atomName="N" /><ExternalBond atomName="C" /><ExternalBond atomName="NE2" /></Residue>
+	</Residues>
+	<AtomTypes>
+		<Type element="N" name="HD1-N" class="N" mass="14.010" />
+		<Type element="H" name="HD1-H" class="H" mass="1.008" />
+		<Type element="C" name="HD1-CA" class="CX" mass="12.010" />
+		<Type element="H" name="HD1-HA" class="H1" mass="1.008" />
+		<Type element="C" name="HD1-CB" class="CT" mass="12.010" />
+		<Type element="H" name="HD1-HB2" class="HC" mass="1.008" />
+		<Type element="H" name="HD1-HB3" class="HC" mass="1.008" />
+		<Type element="C" name="HD1-CG" class="CC" mass="12.010" />
+		<Type element="N" name="HD1-ND1" class="NA" mass="14.010" />
+		<Type element="H" name="HD1-HD1" class="H" mass="1.008" />
+		<Type element="C" name="HD1-CE1" class="CR" mass="12.010" />
+		<Type element="H" name="HD1-HE1" class="H5" mass="1.008" />
+		<Type element="N" name="HD1-NE2" class="Y1" mass="14.010" />
+		<Type element="C" name="HD1-CD2" class="CV" mass="12.010" />
+		<Type element="H" name="HD1-HD2" class="H4" mass="1.008" />
+		<Type element="C" name="HD1-C" class="C" mass="12.010" />
+		<Type element="O" name="HD1-O" class="O" mass="16.000" />
+	</AtomTypes>
+	<HarmonicBondForce>
+		<Bond type1="HD1-N" type2="HD1-CA" length="0.1449000000" k="282001.6000000000" />
+		<Bond type1="HD1-CA" type2="HD1-CB" length="0.1526000000" k="259408.0000000000" />
+		<Bond type1="HD1-CA" type2="HD1-C" length="0.1522000000" k="265265.6000000000" />
+		<Bond type1="HD1-CB" type2="HD1-CG" length="0.1504000000" k="265265.6000000000" />
+		<Bond type1="HD1-CG" type2="HD1-ND1" length="0.1385000000" k="353129.6000000000" />
+		<Bond type1="HD1-CG" type2="HD1-CD2" length="0.1375000000" k="428441.6000000000" />
+		<Bond type1="HD1-ND1" type2="HD1-CE1" length="0.1343000000" k="399153.6000000000" />
+		<Bond type1="HD1-CE1" type2="HD1-NE2" length="0.1335000000" k="408358.4000000000" />
+		<Bond type1="HD1-NE2" type2="HD1-CD2" length="0.1394000000" k="343088.0000000000" />
+		<Bond type1="HD1-C" type2="HD1-O" length="0.1229000000" k="476976.0000000001" />
+		<Bond type1="HD1-N" type2="HD1-H" length="0.1010000000" k="363171.2000000000" />
+		<Bond type1="HD1-CA" type2="HD1-HA" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="HD1-CB" type2="HD1-HB2" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="HD1-CB" type2="HD1-HB3" length="0.1090000000" k="284512.0000000000" />
+		<Bond type1="HD1-ND1" type2="HD1-HD1" length="0.1010000000" k="363171.2000000000" />
+		<Bond type1="HD1-CE1" type2="HD1-HE1" length="0.1080000000" k="307105.6000000000" />
+		<Bond type1="HD1-CD2" type2="HD1-HD2" length="0.1080000000" k="307105.6000000000" />
+	</HarmonicBondForce>
+	<HarmonicAngleForce>
+		<Angle type1="HD1-N" type2="HD1-CA" type3="HD1-CB" angle="1.9146270100" k="669.4400000000" />
+		<Angle type1="HD1-N" type2="HD1-CA" type3="HD1-C" angle="1.9216083300" k="527.1840000000" />
+		<Angle type1="HD1-CA" type2="HD1-CB" type3="HD1-CG" angle="1.9739682300" k="527.1840000000" />
+		<Angle type1="HD1-CA" type2="HD1-C" type3="HD1-O" angle="2.1013773200" k="669.4400000000" />
+		<Angle type1="HD1-CB" type2="HD1-CA" type3="HD1-C" angle="1.9390616300" k="527.1840000000" />
+		<Angle type1="HD1-CB" type2="HD1-CG" type3="HD1-ND1" angle="2.0943960000" k="585.7600000000" />
+		<Angle type1="HD1-CB" type2="HD1-CG" type3="HD1-CD2" angle="2.0943960000" k="585.7600000000" />
+		<Angle type1="HD1-CG" type2="HD1-ND1" type3="HD1-CE1" angle="2.0943960000" k="585.7600000000" />
+		<Angle type1="HD1-CG" type2="HD1-CD2" type3="HD1-NE2" angle="2.0943960000" k="585.7600000000" />
+		<Angle type1="HD1-ND1" type2="HD1-CG" type3="HD1-CD2" angle="2.0943960000" k="585.7600000000" />
+		<Angle type1="HD1-ND1" type2="HD1-CE1" type3="HD1-NE2" angle="2.0943960000" k="585.7600000000" />
+		<Angle type1="HD1-CE1" type2="HD1-NE2" type3="HD1-CD2" angle="2.0420361000" k="585.7600000000" />
+		<Angle type1="HD1-N" type2="HD1-CA" type3="HD1-HA" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="HD1-H" type2="HD1-N" type3="HD1-CA" angle="2.0601875300" k="418.4000000000" />
+		<Angle type1="HD1-CA" type2="HD1-CB" type3="HD1-HB2" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="HD1-CA" type2="HD1-CB" type3="HD1-HB3" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="HD1-HA" type2="HD1-CA" type3="HD1-CB" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="HD1-HA" type2="HD1-CA" type3="HD1-C" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="HD1-HB2" type2="HD1-CB" type3="HD1-HB3" angle="1.9111363500" k="292.8800000000" />
+		<Angle type1="HD1-HB2" type2="HD1-CB" type3="HD1-CG" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="HD1-HB3" type2="HD1-CB" type3="HD1-CG" angle="1.9111363500" k="418.4000000000" />
+		<Angle type1="HD1-CG" type2="HD1-ND1" type3="HD1-HD1" angle="2.0943960000" k="418.4000000000" />
+		<Angle type1="HD1-CG" type2="HD1-CD2" type3="HD1-HD2" angle="2.0943960000" k="418.4000000000" />
+		<Angle type1="HD1-ND1" type2="HD1-CE1" type3="HD1-HE1" angle="2.0943960000" k="418.4000000000" />
+		<Angle type1="HD1-HD1" type2="HD1-ND1" type3="HD1-CE1" angle="2.0943960000" k="418.4000000000" />
+		<Angle type1="HD1-HE1" type2="HD1-CE1" type3="HD1-NE2" angle="2.0943960000" k="418.4000000000" />
+		<Angle type1="HD1-NE2" type2="HD1-CD2" type3="HD1-HD2" angle="2.0943960000" k="418.4000000000" />
+	</HarmonicAngleForce>
+	<PeriodicTorsionForce ordering="amber">
+		<Proper type1="HD1-N" type2="HD1-CA" type3="HD1-CB" type4="HD1-CG" periodicity1="1" phase1="3.1415940000" k1="1.2803040000" periodicity2="2" phase2="3.1415940000" k2="0.9246640000" periodicity3="3" phase3="0.0000000000" k3="0.9162960000" periodicity4="4" phase4="0.0000000000" k4="0.3723760000" />
+		<Proper type1="HD1-N" type2="HD1-CA" type3="HD1-C" type4="HD1-O" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="HD1-CA" type2="HD1-CB" type3="HD1-CG" type4="HD1-ND1" periodicity1="1" phase1="3.1415940000" k1="0.6694400000" periodicity2="2" phase2="3.1415940000" k2="1.6401280000" periodicity3="3" phase3="0.0000000000" k3="2.8702240000" periodicity4="4" phase4="3.1415940000" k4="0.1548080000" />
+		<Proper type1="HD1-CA" type2="HD1-CB" type3="HD1-CG" type4="HD1-CD2" periodicity1="1" phase1="3.1415940000" k1="2.8200160000" periodicity2="2" phase2="0.0000000000" k2="3.1380000000" periodicity3="3" phase3="3.1415940000" k3="0.5104480000" periodicity4="4" phase4="3.1415940000" k4="0.0418400000" />
+		<Proper type1="HD1-CB" type2="HD1-CA" type3="HD1-C" type4="HD1-O" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="HD1-CB" type2="HD1-CG" type3="HD1-ND1" type4="HD1-CE1" periodicity1="2" phase1="3.1415940000" k1="5.8576000000" />
+		<Proper type1="HD1-CB" type2="HD1-CG" type3="HD1-CD2" type4="HD1-NE2" periodicity1="2" phase1="3.1415940000" k1="21.5476000000" />
+		<Proper type1="HD1-CG" type2="HD1-CB" type3="HD1-CA" type4="HD1-C" periodicity1="1" phase1="3.1415940000" k1="0.5983120000" periodicity2="2" phase2="3.1415940000" k2="1.0208960000" periodicity3="3" phase3="0.0000000000" k3="0.9162960000" periodicity4="4" phase4="0.0000000000" k4="0.1046000000" />
+		<Proper type1="HD1-CG" type2="HD1-ND1" type3="HD1-CE1" type4="HD1-NE2" periodicity1="2" phase1="3.1415940000" k1="9.7278000000" />
+		<Proper type1="HD1-CG" type2="HD1-CD2" type3="HD1-NE2" type4="HD1-CE1" periodicity1="2" phase1="3.1415940000" k1="10.0416000000" />
+		<Proper type1="HD1-ND1" type2="HD1-CG" type3="HD1-CD2" type4="HD1-NE2" periodicity1="2" phase1="3.1415940000" k1="21.5476000000" />
+		<Proper type1="HD1-ND1" type2="HD1-CE1" type3="HD1-NE2" type4="HD1-CD2" periodicity1="2" phase1="3.1415940000" k1="20.9200000000" />
+		<Proper type1="HD1-CE1" type2="HD1-ND1" type3="HD1-CG" type4="HD1-CD2" periodicity1="2" phase1="3.1415940000" k1="5.8576000000" />
+		<Proper type1="HD1-N" type2="HD1-CA" type3="HD1-CB" type4="HD1-HB2" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="HD1-N" type2="HD1-CA" type3="HD1-CB" type4="HD1-HB3" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="HD1-H" type2="HD1-N" type3="HD1-CA" type4="HD1-HA" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="HD1-H" type2="HD1-N" type3="HD1-CA" type4="HD1-CB" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="HD1-H" type2="HD1-N" type3="HD1-CA" type4="HD1-C" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="HD1-HA" type2="HD1-CA" type3="HD1-CB" type4="HD1-HB2" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="HD1-HA" type2="HD1-CA" type3="HD1-CB" type4="HD1-HB3" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="HD1-HA" type2="HD1-CA" type3="HD1-CB" type4="HD1-CG" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="HD1-HA" type2="HD1-CA" type3="HD1-C" type4="HD1-O" periodicity1="1" phase1="0.0000000000" k1="3.3472000000" periodicity2="2" phase2="0.0000000000" k2="0.0000000000" periodicity3="3" phase3="3.1415940000" k3="0.3347200000" />
+		<Proper type1="HD1-CB" type2="HD1-CG" type3="HD1-ND1" type4="HD1-HD1" periodicity1="2" phase1="3.1415940000" k1="5.8576000000" />
+		<Proper type1="HD1-CB" type2="HD1-CG" type3="HD1-CD2" type4="HD1-HD2" periodicity1="2" phase1="3.1415940000" k1="21.5476000000" />
+		<Proper type1="HD1-HB2" type2="HD1-CB" type3="HD1-CA" type4="HD1-C" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="HD1-HB2" type2="HD1-CB" type3="HD1-CG" type4="HD1-ND1" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="HD1-HB2" type2="HD1-CB" type3="HD1-CG" type4="HD1-CD2" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="HD1-HB3" type2="HD1-CB" type3="HD1-CA" type4="HD1-C" periodicity1="3" phase1="0.0000000000" k1="0.6508444463" />
+		<Proper type1="HD1-HB3" type2="HD1-CB" type3="HD1-CG" type4="HD1-ND1" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="HD1-HB3" type2="HD1-CB" type3="HD1-CG" type4="HD1-CD2" periodicity1="2" phase1="0.0000000000" k1="0.0000000000" />
+		<Proper type1="HD1-CG" type2="HD1-ND1" type3="HD1-CE1" type4="HD1-HE1" periodicity1="2" phase1="3.1415940000" k1="9.7278000000" />
+		<Proper type1="HD1-ND1" type2="HD1-CG" type3="HD1-CD2" type4="HD1-HD2" periodicity1="2" phase1="3.1415940000" k1="21.5476000000" />
+		<Proper type1="HD1-HD1" type2="HD1-ND1" type3="HD1-CG" type4="HD1-CD2" periodicity1="2" phase1="3.1415940000" k1="5.8576000000" />
+		<Proper type1="HD1-HD1" type2="HD1-ND1" type3="HD1-CE1" type4="HD1-HE1" periodicity1="2" phase1="3.1415940000" k1="9.7278000000" />
+		<Proper type1="HD1-HD1" type2="HD1-ND1" type3="HD1-CE1" type4="HD1-NE2" periodicity1="2" phase1="3.1415940000" k1="9.7278000000" />
+		<Proper type1="HD1-CE1" type2="HD1-NE2" type3="HD1-CD2" type4="HD1-HD2" periodicity1="2" phase1="3.1415940000" k1="10.0416000000" />
+		<Proper type1="HD1-HE1" type2="HD1-CE1" type3="HD1-NE2" type4="HD1-CD2" periodicity1="2" phase1="3.1415940000" k1="20.9200000000" />
+		<Improper type1="HD1-CG" type2="HD1-CB" type3="HD1-CD2" type4="HD1-ND1" periodicity1="2" phase1="3.1415940000" k1="4.6024000000" />
+		<Improper type1="HD1-ND1" type2="HD1-CG" type3="HD1-CE1" type4="HD1-HD1" periodicity1="2" phase1="3.1415940000" k1="4.1840000000" />
+		<Improper type1="HD1-CE1" type2="HD1-ND1" type3="HD1-NE2" type4="HD1-HE1" periodicity1="2" phase1="3.1415940000" k1="4.6024000000" />
+		<Improper type1="HD1-CD2" type2="HD1-CG" type3="HD1-NE2" type4="HD1-HD2" periodicity1="2" phase1="3.1415940000" k1="4.6024000000" />
+	</PeriodicTorsionForce>
+	<NonbondedForce coulomb14scale="0.83333" lj14scale="0.50000">
+		<UseAttributeFromResidue name="charge" />
+		<Atom type="HD1-N" sigma="0.3249998524" epsilon="0.7112799997" />
+		<Atom type="HD1-H" sigma="0.1069078462" epsilon="0.0656888000" />
+		<Atom type="HD1-CA" sigma="0.3399669508" epsilon="0.4577295996" />
+		<Atom type="HD1-HA" sigma="0.2471353043" epsilon="0.0656888004" />
+		<Atom type="HD1-CB" sigma="0.3399669508" epsilon="0.4577295996" />
+		<Atom type="HD1-HB2" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="HD1-HB3" sigma="0.2649532787" epsilon="0.0656888001" />
+		<Atom type="HD1-CG" sigma="0.3399669508" epsilon="0.3598240005" />
+		<Atom type="HD1-ND1" sigma="0.3249998524" epsilon="0.7112799997" />
+		<Atom type="HD1-HD1" sigma="0.1069078462" epsilon="0.0656888000" />
+		<Atom type="HD1-CE1" sigma="0.3399669508" epsilon="0.3598240005" />
+		<Atom type="HD1-HE1" sigma="0.2421462715" epsilon="0.0627600001" />
+		<Atom type="HD1-NE2" sigma="0.3249998524" epsilon="0.7112799997" />
+		<Atom type="HD1-CD2" sigma="0.3399669508" epsilon="0.3598240005" />
+		<Atom type="HD1-HD2" sigma="0.2510552588" epsilon="0.0627600000" />
+		<Atom type="HD1-C" sigma="0.3399669508" epsilon="0.3598240005" />
+		<Atom type="HD1-O" sigma="0.2959921902" epsilon="0.8786399993" />
+	</NonbondedForce>
+</ForceField>

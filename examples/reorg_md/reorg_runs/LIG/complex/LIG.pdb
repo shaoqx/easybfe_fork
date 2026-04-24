@@ -1,0 +1,105 @@
+REMARK   1 CREATED WITH OPENMM 8.2, 2026-04-10
+HETATM    1  C   LIG A   0      14.379  48.738   8.464  1.00  0.00           C  
+HETATM    2  O   LIG A   0      14.846  48.527   9.588  1.00  0.00           O  
+HETATM    3  C1  LIG A   0      14.265  50.232   8.039  1.00  0.00           C  
+HETATM    4  O1  LIG A   0      14.001  47.934   7.608  1.00  0.00           O  
+HETATM    5  C2  LIG A   0      14.892  51.228   9.010  1.00  0.00           C  
+HETATM    6  C3  LIG A   0      16.404  51.395   8.821  1.00  0.00           C  
+HETATM    7  C4  LIG A   0      17.238  51.213  10.096  1.00  0.00           C  
+HETATM    8  C5  LIG A   0      18.559  50.466   9.888  1.00  0.00           C  
+HETATM    9  C6  LIG A   0      19.698  51.021  10.746  1.00  0.00           C  
+HETATM   10  C7  LIG A   0      20.663  49.949  11.277  1.00  0.00           C  
+HETATM   11  C8  LIG A   0      22.101  50.200  10.900  1.00  0.00           C  
+HETATM   12  C9  LIG A   0      23.178  49.501  11.214  1.00  0.00           C  
+HETATM   13  C10 LIG A   0      23.267  48.234  12.033  1.00  0.00           C  
+HETATM   14  C11 LIG A   0      24.227  48.390  13.189  1.00  0.00           C  
+HETATM   15  C12 LIG A   0      25.506  48.725  13.159  1.00  0.00           C  
+HETATM   16  C13 LIG A   0      26.353  49.042  11.952  1.00  0.00           C  
+HETATM   17  C14 LIG A   0      26.467  50.545  11.647  1.00  0.00           C  
+HETATM   18  C15 LIG A   0      26.214  51.002  10.201  1.00  0.00           C  
+HETATM   19  C16 LIG A   0      27.456  51.419   9.389  1.00  0.00           C  
+HETATM   20  C17 LIG A   0      28.762  51.512  10.183  1.00  0.00           C  
+HETATM   21  H   LIG A   0      13.227  50.471   7.942  1.00  0.00           H  
+HETATM   22  H1  LIG A   0      14.809  50.325   7.122  1.00  0.00           H  
+HETATM   23  H2  LIG A   0      14.711  50.888  10.008  1.00  0.00           H  
+HETATM   24  H3  LIG A   0      14.443  52.180   8.818  1.00  0.00           H  
+HETATM   25  H4  LIG A   0      16.585  52.379   8.443  1.00  0.00           H  
+HETATM   26  H5  LIG A   0      16.710  50.621   8.149  1.00  0.00           H  
+HETATM   27  H6  LIG A   0      16.652  50.665  10.804  1.00  0.00           H  
+HETATM   28  H7  LIG A   0      17.493  52.195  10.436  1.00  0.00           H  
+HETATM   29  H8  LIG A   0      18.838  50.545   8.858  1.00  0.00           H  
+HETATM   30  H9  LIG A   0      18.402  49.449  10.181  1.00  0.00           H  
+HETATM   31  H10 LIG A   0      19.270  51.532  11.583  1.00  0.00           H  
+HETATM   32  H11 LIG A   0      20.272  51.668  10.116  1.00  0.00           H  
+HETATM   33  H12 LIG A   0      20.369  49.000  10.879  1.00  0.00           H  
+HETATM   34  H13 LIG A   0      20.607  49.974  12.345  1.00  0.00           H  
+HETATM   35  H14 LIG A   0      22.268  51.034  10.315  1.00  0.00           H  
+HETATM   36  H15 LIG A   0      24.073  49.867  10.854  1.00  0.00           H  
+HETATM   37  H16 LIG A   0      23.605  47.437  11.405  1.00  0.00           H  
+HETATM   38  H17 LIG A   0      22.296  48.020  12.429  1.00  0.00           H  
+HETATM   39  H18 LIG A   0      23.833  48.212  14.126  1.00  0.00           H  
+HETATM   40  H19 LIG A   0      25.983  48.776  14.073  1.00  0.00           H  
+HETATM   41  H20 LIG A   0      27.337  48.657  12.121  1.00  0.00           H  
+HETATM   42  H21 LIG A   0      25.873  48.590  11.109  1.00  0.00           H  
+HETATM   43  H22 LIG A   0      25.761  51.052  12.271  1.00  0.00           H  
+HETATM   44  H23 LIG A   0      27.495  50.781  11.829  1.00  0.00           H  
+HETATM   45  H24 LIG A   0      25.606  51.903  10.284  1.00  0.00           H  
+HETATM   46  H25 LIG A   0      25.731  50.180   9.672  1.00  0.00           H  
+HETATM   47  H26 LIG A   0      27.253  52.427   9.029  1.00  0.00           H  
+HETATM   48  H27 LIG A   0      27.598  50.689   8.592  1.00  0.00           H  
+HETATM   49  H28 LIG A   0      28.576  51.261  11.206  1.00  0.00           H  
+HETATM   50  H29 LIG A   0      29.145  52.510  10.125  1.00  0.00           H  
+HETATM   51  H30 LIG A   0      29.478  50.831   9.773  1.00  0.00           H  
+TER      52      LIG A   0
+CONECT    1    2    3    4
+CONECT    2    1
+CONECT    3    1    5   21   22
+CONECT    4    1
+CONECT    5    3    6   23   24
+CONECT    6    5    7   25   26
+CONECT    7    6    8   27   28
+CONECT    8    7    9   29   30
+CONECT    9    8   10   31   32
+CONECT   10    9   11   33   34
+CONECT   11   10   12   35
+CONECT   12   11   13   36
+CONECT   13   12   14   37   38
+CONECT   14   13   15   39
+CONECT   15   14   16   40
+CONECT   16   15   17   41   42
+CONECT   17   16   18   43   44
+CONECT   18   17   19   45   46
+CONECT   19   18   20   47   48
+CONECT   20   19   49   50   51
+CONECT   21    3
+CONECT   22    3
+CONECT   23    5
+CONECT   24    5
+CONECT   25    6
+CONECT   26    6
+CONECT   27    7
+CONECT   28    7
+CONECT   29    8
+CONECT   30    8
+CONECT   31    9
+CONECT   32    9
+CONECT   33   10
+CONECT   34   10
+CONECT   35   11
+CONECT   36   12
+CONECT   37   13
+CONECT   38   13
+CONECT   39   14
+CONECT   40   15
+CONECT   41   16
+CONECT   42   16
+CONECT   43   17
+CONECT   44   17
+CONECT   45   18
+CONECT   46   18
+CONECT   47   19
+CONECT   48   19
+CONECT   49   20
+CONECT   50   20
+CONECT   51   20
+END
