@@ -302,7 +302,7 @@ def prepare_ligand_directory(mol2_path: Path, frcmod_path: Path, out_dir: Path, 
     with tempfile.TemporaryDirectory() as tmp:
         tmpd = Path(tmp)
         leap_txt = '\n'.join([
-            'source leaprc.gaff2',
+            'source leaprc.gaff',
             f'loadamberparams {frcmod_path.resolve()}',
             f'lig = loadmol2 {mol2_path.resolve()}',
             f'set lig name {lig_name}',
@@ -460,7 +460,7 @@ def prepare_metal_center_ffxml(lib_dir: Path, out_dir: Path, residue_names: list
             tmpd = Path(tmp)
             leap_lines = [
                 'source leaprc.protein.ff14SB',
-                'source leaprc.gaff2',
+                'source leaprc.gaff',
             ]
             # MCPB-style residues can cross-reference custom atom types across frcmods.
             for load_resn in residue_names:

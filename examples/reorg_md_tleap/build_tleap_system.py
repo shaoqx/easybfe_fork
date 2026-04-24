@@ -12,6 +12,74 @@ import parmed
 NONSTD = ["AN1", "FE1", "HD1", "HD2", "HD3", "IE1", "O11", "LIG"]
 
 
+def _read_cryst1_box(pdb_path: Path) -> list[float]:
+    with pdb_path.open() as handle:
+        for line in handle:
+            if line.startswith("CRYST1"):
+                a = float(line[6:15])
+                b = float(line[15:24])
+                c = float(line[24:33])
+                alpha = float(line[33:40])
+                beta = float(line[40:47])
+                gamma = float(line[47:54])
+                return [a, b, c, alpha, beta, gamma]
+    raise ValueError(f"No CRYST1 record found in {pdb_path}")
+
+
+def _read_inpcrd_box(inpcrd_path: Path) -> list[float]:
+    lines = inpcrd_path.read_text().splitlines()
+    if len(lines) < 3:
+        raise ValueError(f"{inpcrd_path} is too short to contain box dimensions")
+    parts = lines[-1].split()
+    if len(parts) != 6:
+        raise ValueError(f"Last line of {inpcrd_path} does not contain 6 box values")
+    return [float(x) for x in parts]
+
+
+def _resolve_box(src_pdb: Path, inpcrd: Path) -> list[float]:
+    try:
+        return _read_cryst1_box(src_pdb)
+    except ValueError:
+        return _read_inpcrd_box(inpcrd)
+
+
+def _assert_periodic_prmtop(prmtop_path: Path) -> None:
+    lines = prmtop_path.read_text().splitlines()
+    in_pointers = False
+    pointer_values: list[int] = []
+    saw_box_dimensions = any(line.startswith("%FLAG BOX_DIMENSIONS") for line in lines)
+
+    for line in lines:
+        if line.startswith("%FLAG "):
+            flag = line[6:].strip()
+            in_pointers = flag == "POINTERS"
+            continue
+        if line.startswith("%FORMAT"):
+            continue
+        if in_pointers:
+            for i in range(0, len(line), 8):
+                chunk = line[i:i + 8].strip()
+                if chunk:
+                    pointer_values.append(int(chunk))
+            if len(pointer_values) >= 28:
+                break
+
+    if len(pointer_values) < 28:
+        raise RuntimeError(f"Failed to parse POINTERS from {prmtop_path}")
+    if pointer_values[27] == 0:
+        raise RuntimeError(f"{prmtop_path} still has IFBOX=0 after box rewrite")
+    if not saw_box_dimensions:
+        raise RuntimeError(f"{prmtop_path} is missing BOX_DIMENSIONS after box rewrite")
+
+
+def _rewrite_amber_files_with_box(prmtop: Path, inpcrd: Path, box: list[float]) -> None:
+    struct = parmed.load_file(str(prmtop), xyz=str(inpcrd))
+    struct.box = box
+    struct.save(str(prmtop), overwrite=True)
+    struct.save(str(inpcrd), overwrite=True)
+    _assert_periodic_prmtop(prmtop)
+
+
 def _normalize_pdb_for_tleap(src_pdb: Path, dst_pdb: Path) -> None:
     """Normalize names to improve tleap template matching."""
     lines = src_pdb.read_text().splitlines()
@@ -121,6 +189,9 @@ def run_tleap(reorg_md_dir: Path, out_dir: Path) -> tuple[Path, Path, Path]:
         raise RuntimeError(f"tleap failed, see: {tleap_log}")
     if not out_prmtop.exists() or not out_inpcrd.exists():
         raise RuntimeError(f"tleap finished but outputs missing, see: {tleap_log}")
+
+    box = _resolve_box(src_pdb, out_inpcrd)
+    _rewrite_amber_files_with_box(out_prmtop, out_inpcrd, box)
 
     return out_prmtop, out_inpcrd, tleap_log
 
