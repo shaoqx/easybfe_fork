@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 import logging
 from typing import Optional
+import xml.etree.ElementTree as ET
 
 import numpy as np
 import openmm.app as app
@@ -18,6 +19,106 @@ from ..parallel import run_func_parallel
 
 
 logger = logging.getLogger(__name__)
+
+
+def _collect_residue_names_from_ffxml(ff_paths: list[str]) -> set[str]:
+    """Collect residue template names from local ffxml files."""
+    residue_names: set[str] = set()
+    for ff_path in ff_paths:
+        xml_path = Path(ff_path).expanduser()
+        if not xml_path.is_file():
+            continue
+        try:
+            root = ET.parse(str(xml_path)).getroot()
+        except Exception:
+            continue
+        residues = root.find('Residues')
+        if residues is None:
+            continue
+        for residue in residues.findall('Residue'):
+            name = residue.get('name')
+            if name:
+                residue_names.add(name)
+    return residue_names
+
+
+def _build_residue_templates(
+    topology: app.Topology,
+    custom_residue_names: set[str],
+    ligand_resname: str | None = None,
+) -> dict[app.topology.Residue, str]:
+    """Build explicit OpenMM residueTemplates mapping."""
+    residue_templates: dict[app.topology.Residue, str] = {}
+    has_hd_histidine_templates = any(name in custom_residue_names for name in ('HD1', 'HD2', 'HD3'))
+    has_asn_like_templates = any(name.startswith('AN') for name in custom_residue_names)
+    has_ile_like_templates = any(name.startswith('IE') for name in custom_residue_names)
+
+    def _terminal_variant(base: str, residue: app.topology.Residue) -> str:
+        atom_names = {atom.name for atom in residue.atoms()}
+        if 'OXT' in atom_names:
+            return f'C{base}'
+        if ('H1' in atom_names) or ('H2' in atom_names) or ('H3' in atom_names):
+            return f'N{base}'
+        return base
+
+    def _his_base(residue: app.topology.Residue) -> str:
+        atom_names = {atom.name for atom in residue.atoms()}
+        has_hd1 = 'HD1' in atom_names
+        has_he2 = 'HE2' in atom_names
+        if has_hd1 and has_he2:
+            return 'HIP'
+        if has_he2:
+            return 'HIE'
+        return 'HID'
+
+    for residue in topology.residues():
+        if (ligand_resname is not None) and (residue.name == ligand_resname):
+            residue_templates[residue] = residue.name
+        elif residue.name in custom_residue_names:
+            residue_templates[residue] = residue.name
+        elif has_hd_histidine_templates and residue.name == 'HIS':
+            residue_templates[residue] = _terminal_variant(_his_base(residue), residue)
+        elif has_asn_like_templates and residue.name == 'ASN':
+            residue_templates[residue] = _terminal_variant('ASN', residue)
+        elif has_ile_like_templates and residue.name == 'ILE':
+            residue_templates[residue] = _terminal_variant('ILE', residue)
+    return residue_templates
+
+
+def _patch_missing_bond_types(parmed_struct: parmed.Structure) -> None:
+    """Fill missing bond types caused by custom residue boundary bonds."""
+    missing_bonds = [bond for bond in parmed_struct.bonds if bond.type is None]
+    if not missing_bonds:
+        return
+
+    type_lookup: dict[tuple[str, str], parmed.BondType] = {}
+    for bond in parmed_struct.bonds:
+        if bond.type is None:
+            continue
+        key = tuple(sorted((bond.atom1.type, bond.atom2.type)))
+        type_lookup.setdefault(key, bond.type)
+
+    # Peptide-like C-N reference present in this system.
+    peptide_ref = type_lookup.get(tuple(sorted(('C4', 'N1'))))
+    fallback_pairs = {tuple(sorted(('C4', 'N2'))), tuple(sorted(('C6', 'N1')))}
+
+    for bond in missing_bonds:
+        key = tuple(sorted((bond.atom1.type, bond.atom2.type)))
+        bond_type = type_lookup.get(key)
+        if (bond_type is None) and (key in fallback_pairs):
+            bond_type = peptide_ref
+        if bond_type is None:
+            a1, a2 = bond.atom1, bond.atom2
+            raise RuntimeError(
+                f"Missing bonded parameter for {a1.residue.name}:{a1.name}({a1.type}) - "
+                f"{a2.residue.name}:{a2.name}({a2.type})"
+            )
+        bond.type = bond_type
+
+    logger.warning(
+        "Patched %d missing bond type(s) at custom residue boundaries.",
+        len(missing_bonds),
+    )
 
 
 def setup_ligand_abfe_leg(
@@ -44,6 +145,8 @@ def setup_ligand_abfe_leg(
 
     # force field initialization
     ff = app.ForceField(*config.forcefields, str(wdir / f'{ligand.name}.xml'))
+    ligand_resname = list(ligand_pdb.topology.residues())[0].name
+    custom_residue_names = _collect_residue_names_from_ffxml(config.extra_ff)
 
     # setup systems
     modeller = app.Modeller(app.Topology(), [])
@@ -62,11 +165,13 @@ def setup_ligand_abfe_leg(
     modeller.positions = shiftToBoxCenter(modeller.positions, box_vectors)
     modeller.topology.setPeriodicBoxVectors(box_vectors)
     assert not config.gas_phase, 'Gas-phase ABFE are ill-defined!'
+    residue_templates = _build_residue_templates(modeller.topology, custom_residue_names, ligand_resname)
     modeller.addSolvent(
         forcefield=ff,
         model=config.water_model,
         neutralize=True,
-        ionicStrength=config.ionic_strength * unit.molar
+        ionicStrength=config.ionic_strength * unit.molar,
+        residueTemplates=residue_templates
     )
 
     # generate masks
@@ -99,9 +204,17 @@ def setup_ligand_abfe_leg(
         rst_settings += restraints.make_rst(
             offset=num_ligand_atoms if not duplicate_ligand else num_ligand_atoms*2
         )
-        
-    system = ff.createSystem(modeller.topology, nonbondedMethod=app.PME, constraints=None, rigidWater=False)
+
+    residue_templates = _build_residue_templates(modeller.topology, custom_residue_names, ligand_resname)
+    system = ff.createSystem(
+        modeller.topology,
+        nonbondedMethod=app.PME,
+        constraints=None,
+        rigidWater=False,
+        residueTemplates=residue_templates,
+    )
     parmed_struct = parmed.openmm.load_topology(modeller.topology, system, xyz=modeller.positions)
+    _patch_missing_bond_types(parmed_struct)
     
     # Handle Amber special SETTLE water 
     sanitize_water(parmed_struct, 'ALW', alchem_waters)

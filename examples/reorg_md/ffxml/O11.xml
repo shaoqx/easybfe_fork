@@ -1,0 +1,23 @@
+<ForceField>
+	<Residues>
+		<Residue name="O11">
+			<Atom name="O" type="O11-O" charge="-0.7001880004" />
+			<Atom name="H1" type="O11-H1" charge="0.4012300001" />
+			<Bond atomName1="O" atomName2="H1" />
+		<ExternalBond atomName="O" /></Residue>
+	</Residues>
+	<AtomTypes>
+		<Type element="O" name="O11-O" class="Y6" mass="16.000" />
+		<Type element="H" name="O11-H1" class="ho" mass="1.008" />
+	</AtomTypes>
+	<HarmonicBondForce>
+		<Bond type1="O11-O" type2="O11-H1" length="0.0981000000" k="299490.7200000000" />
+	</HarmonicBondForce>
+	<HarmonicAngleForce />
+	<PeriodicTorsionForce ordering="amber" />
+	<NonbondedForce coulomb14scale="0.83333" lj14scale="0.50000">
+		<UseAttributeFromResidue name="charge" />
+		<Atom type="O11-O" sigma="0.2959921902" epsilon="0.8786399993" />
+		<Atom type="O11-H1" sigma="0.0537924646" epsilon="0.0196648000" />
+	</NonbondedForce>
+</ForceField>

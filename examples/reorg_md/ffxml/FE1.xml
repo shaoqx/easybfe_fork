@@ -1,0 +1,17 @@
+<ForceField>
+	<Residues>
+		<Residue name="FE1">
+			<Atom name="FE1" type="FE1-FE1" charge="0.6444430012" />
+		<ExternalBond atomName="FE1" /><ExternalBond atomName="FE1" /><ExternalBond atomName="FE1" /><ExternalBond atomName="FE1" /><ExternalBond atomName="FE1" /><ExternalBond atomName="FE1" /></Residue>
+	</Residues>
+	<AtomTypes>
+		<Type element="Fe" name="FE1-FE1" class="M1" mass="55.850" />
+	</AtomTypes>
+	<HarmonicBondForce />
+	<HarmonicAngleForce />
+	<PeriodicTorsionForce ordering="amber" />
+	<NonbondedForce coulomb14scale="0.83333" lj14scale="0.50000">
+		<UseAttributeFromResidue name="charge" />
+		<Atom type="FE1-FE1" sigma="0.2494516410" epsilon="0.0657201384" />
+	</NonbondedForce>
+</ForceField>

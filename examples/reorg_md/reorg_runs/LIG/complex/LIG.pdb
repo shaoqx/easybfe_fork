@@ -1,4 +1,4 @@
-REMARK   1 CREATED WITH OPENMM 8.2, 2026-04-08
+REMARK   1 CREATED WITH OPENMM 8.2, 2026-04-10
 HETATM    1  C   LIG A   0      14.379  48.738   8.464  1.00  0.00           C  
 HETATM    2  O   LIG A   0      14.846  48.527   9.588  1.00  0.00           O  
 HETATM    3  C1  LIG A   0      14.265  50.232   8.039  1.00  0.00           C  

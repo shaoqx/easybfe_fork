@@ -5,7 +5,7 @@ ligand_batch:
   - LIG
 
 # Produced by prepare_inputs.py
-protein: ./pdbs/3pzw_sub_std_no_lig_fixed.pdb
+protein: ./pdbs/3pzw_sub_full_no_lig.pdb
 
 output_base: ./reorg_runs
 
@@ -25,6 +25,15 @@ complex:
     - amber14-all.xml
   water_ff:
     - amber14/tip3p.xml
+  extra_ff:
+    - ./ffxml/AN1.xml
+    - ./ffxml/FE1.xml
+    - ./ffxml/HD1.xml
+    - ./ffxml/HD2.xml
+    - ./ffxml/HD3.xml
+    - ./ffxml/IE1.xml
+    - ./ffxml/O11.xml
+    - ./ffxml/mcpb_metal_params.xml
 
   workflow:
     - type: em

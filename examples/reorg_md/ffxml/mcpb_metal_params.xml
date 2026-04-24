@@ -1,0 +1,160 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2026-04-10</DateGenerated>
+  </Info>
+  <AtomTypes>
+    <Type element="Fe" name="M1" class="M1" mass="55.85"/>
+    <Type element="N" name="Y1" class="Y1" mass="14.01"/>
+    <Type element="N" name="Y2" class="Y2" mass="14.01"/>
+    <Type element="N" name="Y3" class="Y3" mass="14.01"/>
+    <Type element="O" name="Y4" class="Y4" mass="16.0"/>
+    <Type element="O" name="Y5" class="Y5" mass="16.0"/>
+    <Type element="O" name="Y6" class="Y6" mass="16.0"/>
+  </AtomTypes>
+  <HarmonicBondForce>
+    <Bond class1="M1" class2="Y6" length="0.18637" k="131042.87999999998"/>
+    <Bond class1="Y1" class2="M1" length="0.22004" k="29371.679999999997"/>
+    <Bond class1="Y2" class2="M1" length="0.21906" k="30794.23999999999"/>
+    <Bond class1="Y3" class2="M1" length="0.22305000000000003" k="24936.639999999996"/>
+    <Bond class1="Y4" class2="M1" length="0.20973000000000003" k="13054.079999999998"/>
+    <Bond class1="Y5" class2="M1" length="0.19744" k="44936.159999999996"/>
+    <Bond class1="C" class2="Y4" length="0.12290000000000001" k="476975.9999999999"/>
+    <Bond class1="C" class2="Y5" length="0.125" k="548940.7999999999"/>
+    <Bond class1="CR" class2="Y1" length="0.1335" k="408358.3999999999"/>
+    <Bond class1="CR" class2="Y2" length="0.1335" k="408358.3999999999"/>
+    <Bond class1="CR" class2="Y3" length="0.1335" k="408358.3999999999"/>
+    <Bond class1="Y1" class2="CV" length="0.1394" k="343087.99999999994"/>
+    <Bond class1="Y2" class2="CV" length="0.1394" k="343087.99999999994"/>
+    <Bond class1="Y3" class2="CV" length="0.1394" k="343087.99999999994"/>
+    <Bond class1="Y6" class2="ho" length="0.0981" k="299490.7199999999"/>
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle class1="C" class2="Y4" class3="M1" angle="2.2556635252774715" k="454.63344"/>
+    <Angle class1="C" class2="Y5" class3="M1" angle="2.2439698192891093" k="759.3960000000001"/>
+    <Angle class1="CR" class2="Y1" class3="M1" angle="2.122494903350304" k="480.40688"/>
+    <Angle class1="CR" class2="Y2" class3="M1" angle="2.125287430153495" k="571.6180800000001"/>
+    <Angle class1="CR" class2="Y3" class3="M1" angle="2.1078341376335517" k="360.49344"/>
+    <Angle class1="M1" class2="Y1" class3="CV" angle="2.288650248140164" k="560.73968"/>
+    <Angle class1="M1" class2="Y2" class3="CV" angle="2.300867552904125" k="592.8728"/>
+    <Angle class1="M1" class2="Y3" class3="CV" angle="2.3232077673296523" k="373.29648000000003"/>
+    <Angle class1="M1" class2="Y6" class3="ho" angle="1.8804177360986907" k="233.21616000000003"/>
+    <Angle class1="Y1" class2="M1" class3="Y2" angle="1.5540411659757511" k="250.37056"/>
+    <Angle class1="Y1" class2="M1" class3="Y3" angle="1.5631168780861215" k="427.93952"/>
+    <Angle class1="Y1" class2="M1" class3="Y4" angle="1.4920819775299523" k="236.22864"/>
+    <Angle class1="Y1" class2="M1" class3="Y5" angle="3.054500723915276" k="551.78592"/>
+    <Angle class1="Y1" class2="M1" class3="Y6" angle="1.5564846269285433" k="504.50672000000003"/>
+    <Angle class1="Y2" class2="M1" class3="Y3" angle="1.5269885625698387" k="288.94704"/>
+    <Angle class1="Y2" class2="M1" class3="Y4" angle="2.9639181357367703" k="416.47536"/>
+    <Angle class1="Y2" class2="M1" class3="Y5" angle="1.6168730190475469" k="361.24656000000004"/>
+    <Angle class1="Y2" class2="M1" class3="Y6" angle="1.609368103263971" k="502.41472"/>
+    <Angle class1="Y3" class2="M1" class3="Y4" angle="1.4645057753484418" k="323.75792"/>
+    <Angle class1="Y3" class2="M1" class3="Y5" angle="1.4978415640615335" k="487.0176"/>
+    <Angle class1="Y3" class2="M1" class3="Y6" angle="3.1190779062390663" k="422.50032000000004"/>
+    <Angle class1="Y4" class2="M1" class3="Y5" angle="1.6081463727875753" k="329.61552"/>
+    <Angle class1="Y4" class2="M1" class3="Y6" angle="1.6804030038201405" k="660.31888"/>
+    <Angle class1="Y5" class2="M1" class3="Y6" angle="1.6659167710285876" k="586.09472"/>
+    <Angle class1="2C" class2="C" class3="Y4" angle="2.101376419401173" k="669.44"/>
+    <Angle class1="CC" class2="CV" class3="Y1" angle="2.0943951023931953" k="585.76"/>
+    <Angle class1="CC" class2="CV" class3="Y2" angle="2.0943951023931953" k="585.76"/>
+    <Angle class1="CC" class2="CV" class3="Y3" angle="2.0943951023931953" k="585.76"/>
+    <Angle class1="CR" class2="Y1" class3="CV" angle="2.0420352248333655" k="585.76"/>
+    <Angle class1="CR" class2="Y2" class3="CV" angle="2.0420352248333655" k="585.76"/>
+    <Angle class1="CR" class2="Y3" class3="CV" angle="2.0420352248333655" k="585.76"/>
+    <Angle class1="CX" class2="C" class3="Y5" angle="2.0420352248333655" k="585.76"/>
+    <Angle class1="N" class2="C" class3="Y4" angle="2.1450096507010312" k="669.44"/>
+    <Angle class1="NA" class2="CR" class3="Y1" angle="2.0943951023931953" k="585.76"/>
+    <Angle class1="NA" class2="CR" class3="Y2" angle="2.0943951023931953" k="585.76"/>
+    <Angle class1="NA" class2="CR" class3="Y3" angle="2.0943951023931953" k="585.76"/>
+    <Angle class1="Y1" class2="CR" class3="H5" angle="2.0943951023931953" k="418.40000000000003"/>
+    <Angle class1="Y1" class2="CV" class3="H4" angle="2.0943951023931953" k="418.40000000000003"/>
+    <Angle class1="Y2" class2="CR" class3="H5" angle="2.0943951023931953" k="418.40000000000003"/>
+    <Angle class1="Y2" class2="CV" class3="H4" angle="2.0943951023931953" k="418.40000000000003"/>
+    <Angle class1="Y3" class2="CR" class3="H5" angle="2.0943951023931953" k="418.40000000000003"/>
+    <Angle class1="Y3" class2="CV" class3="H4" angle="2.0943951023931953" k="418.40000000000003"/>
+    <Angle class1="Y5" class2="C" class3="O2" angle="2.199114857512855" k="669.44"/>
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper class1="" class2="CR" class3="Y1" class4="" periodicity1="2" phase1="3.141592653589793" k1="20.92"/>
+    <Proper class1="" class2="CR" class3="Y2" class4="" periodicity1="2" phase1="3.141592653589793" k1="20.92"/>
+    <Proper class1="" class2="CR" class3="Y3" class4="" periodicity1="2" phase1="3.141592653589793" k1="20.92"/>
+    <Proper class1="" class2="CV" class3="Y1" class4="" periodicity1="2" phase1="3.141592653589793" k1="10.0416"/>
+    <Proper class1="" class2="CV" class3="Y2" class4="" periodicity1="2" phase1="3.141592653589793" k1="10.0416"/>
+    <Proper class1="" class2="CV" class3="Y3" class4="" periodicity1="2" phase1="3.141592653589793" k1="10.0416"/>
+    <Proper class1="2C" class2="C" class3="Y4" class4="M1" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="C" class2="Y4" class3="M1" class4="Y5" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="C" class2="Y4" class3="M1" class4="Y6" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="C" class2="Y5" class3="M1" class4="Y6" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CC" class2="CV" class3="Y1" class4="M1" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CC" class2="CV" class3="Y2" class4="M1" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CC" class2="CV" class3="Y3" class4="M1" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y1" class3="M1" class4="Y2" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y1" class3="M1" class4="Y3" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y1" class3="M1" class4="Y4" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y1" class3="M1" class4="Y5" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y1" class3="M1" class4="Y6" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y2" class3="M1" class4="Y3" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y2" class3="M1" class4="Y4" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y2" class3="M1" class4="Y5" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y2" class3="M1" class4="Y6" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y3" class3="M1" class4="Y4" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y3" class3="M1" class4="Y5" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CR" class2="Y3" class3="M1" class4="Y6" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CX" class2="C" class3="Y5" class4="M1" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="H" class2="N" class3="C" class4="Y4" periodicity1="2" phase1="3.141592653589793" k1="10.46" periodicity2="1" phase2="0.0" k2="8.368"/>
+    <Proper class1="M1" class2="Y1" class3="CR" class4="H5" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="M1" class2="Y1" class3="CV" class4="H4" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="M1" class2="Y2" class3="CR" class4="H5" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="M1" class2="Y2" class3="CV" class4="H4" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="M1" class2="Y3" class3="CR" class4="H5" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="M1" class2="Y3" class3="CV" class4="H4" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="M1" class2="Y5" class3="C" class4="O2" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="N" class2="C" class3="Y4" class4="M1" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="NA" class2="CR" class3="Y1" class4="M1" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="NA" class2="CR" class3="Y2" class4="M1" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="NA" class2="CR" class3="Y3" class4="M1" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="CX" class2="2C" class3="C" class4="Y4" periodicity1="1" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y1" class2="M1" class3="Y2" class4="CR" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y1" class2="M1" class3="Y2" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y1" class2="M1" class3="Y3" class4="CR" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y1" class2="M1" class3="Y3" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y1" class2="M1" class3="Y4" class4="C" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y1" class2="M1" class3="Y5" class4="C" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y1" class2="M1" class3="Y6" class4="ho" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y2" class2="M1" class3="Y1" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y2" class2="M1" class3="Y3" class4="CR" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y2" class2="M1" class3="Y3" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y2" class2="M1" class3="Y4" class4="C" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y2" class2="M1" class3="Y5" class4="C" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y2" class2="M1" class3="Y6" class4="ho" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y3" class2="M1" class3="Y1" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y3" class2="M1" class3="Y2" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y3" class2="M1" class3="Y4" class4="C" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y3" class2="M1" class3="Y5" class4="C" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y3" class2="M1" class3="Y6" class4="ho" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y4" class2="C" class3="2C" class4="HC" periodicity1="3" phase1="3.141592653589793" k1="0.33472" periodicity2="2" phase2="0.0" k2="0.0" periodicity3="1" phase3="0.0" k3="3.3472000000000004"/>
+    <Proper class1="Y4" class2="M1" class3="Y1" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y4" class2="M1" class3="Y2" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y4" class2="M1" class3="Y3" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y4" class2="M1" class3="Y5" class4="C" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y4" class2="M1" class3="Y6" class4="ho" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y5" class2="M1" class3="Y1" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y5" class2="M1" class3="Y2" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y5" class2="M1" class3="Y3" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y5" class2="M1" class3="Y6" class4="ho" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y6" class2="M1" class3="Y1" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y6" class2="M1" class3="Y2" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Proper class1="Y6" class2="M1" class3="Y3" class4="CV" periodicity1="3" phase1="0.0" k1="0.0"/>
+    <Improper class1="C" class2="" class3="" class4="Y4" periodicity1="2" phase1="3.141592653589793" k1="43.932"/>
+    <Improper class1="C" class2="" class3="O2" class4="Y5" periodicity1="2" phase1="3.141592653589793" k1="43.932"/>
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge"/>
+    <Atom class="M1" sigma="0.249451641079295" epsilon="0.06572013816000001"/>
+    <Atom class="Y1" sigma="0.3249998523775958" epsilon="0.7112800000000001"/>
+    <Atom class="Y2" sigma="0.3249998523775958" epsilon="0.7112800000000001"/>
+    <Atom class="Y3" sigma="0.3249998523775958" epsilon="0.7112800000000001"/>
+    <Atom class="Y4" sigma="0.2959921901149463" epsilon="0.87864"/>
+    <Atom class="Y5" sigma="0.2959921901149463" epsilon="0.87864"/>
+    <Atom class="Y6" sigma="0.2959921901149463" epsilon="0.87864"/>
+  </NonbondedForce>
+</ForceField>
